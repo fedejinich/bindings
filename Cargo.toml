@@ -11,9 +11,9 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = "0.20.0"
-bitcoin-script = { git = "https://github.com/BitVM/rust-bitcoin-script", branch= "StructuredScript" }
+bitcoin-script = { git = "https://github.com/BitVM/rust-bitcoin-script", rev = "bea92021800fb89bd1fc54d4cb45f3027129953c" } # tied to this specific version
 bitcoin = { version = "0.32.5", features = ["rand-std"] }
-bitvm = { git = "https://github.com/ramonamela/BitVM", branch = "stack_efficient_sha256_rebase" }
+bitvm = { git = "https://github.com/fedejinich/BitVM" } # this contains "bitcoin-script" pointing to "bea92021800fb89bd1fc54d4cb45f3027129953c"
 strum = "0.26"
 strum_macros = "0.26"
 hex = "0.4.3"
@@ -30,7 +30,7 @@ sha2 = "0.10.8"
 tokio = { version = "1.37.0", features = ["full"] }
 esplora-client = { git = "https://github.com/BitVM/rust-esplora-client" }
 serde_json = "1.0.116"
-bitcoin-script-stack = { git = "https://github.com/BitVM/rust-bitcoin-script-stack", branch = "bitvm" }
+bitcoin-script-stack = { git = "https://github.com/fedejinich/rust-bitcoin-script-stack" } # this contains "bitcoin-script" pointing to "bea92021800fb89bd1fc54d4cb45f3027129953c"
 rand = "0.8.5"
 rand_chacha = "0.3.1"
 dotenv = "0.15.0"
